@@ -5,9 +5,11 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     RecyclerView recyclerView;
 
@@ -22,6 +24,11 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.addItemDecoration(new DividerItemDecoration(recyclerView.getContext(), manager.getOrientation()));
         recyclerView.setLayoutManager(manager);
-        recyclerView.setAdapter(new RecyclerViewAdapter());
+        recyclerView.setAdapter(new RecyclerViewAdapter(this));
+    }
+
+    @Override
+    public void onClick(View view) {
+        startActivity(new Intent(this, ItemEditActivity.class));
     }
 }

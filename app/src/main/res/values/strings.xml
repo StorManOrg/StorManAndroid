@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">StoRe</string>
+    <string name="title_activity_item_edit">Edit Item</string>
 </resources>

@@ -1,6 +1,6 @@
 <resources>
 
-    <style name="AppTheme" parent="AppTheme.Base"/>
+    <style name="AppTheme" parent="AppTheme.Base" />
 
     <style name="AppTheme.Base" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/color_primary</item>
@@ -18,7 +18,7 @@
         <item name="colorOnBackground">@color/color_secondary</item>
         <item name="colorOnSurface">@color/color_secondary</item>
         <item name="colorOnError">@color/color_white</item>
-        
+
         <item name="android:navigationBarColor">@color/color_secondary</item>
         <item name="android:statusBarColor">@color/color_primary</item>
     </style>
