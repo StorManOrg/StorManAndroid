@@ -1,6 +1,6 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/android,androidstudio,java,intellij
-# Edit at https://www.toptal.com/developers/gitignore?templates=android,androidstudio,java,intellij
+# Created by https://www.toptal.com/developers/gitignore/api/android,androidstudio,java,intellij,vscode
+# Edit at https://www.toptal.com/developers/gitignore?templates=android,androidstudio,java,intellij,vscode
 
 ### Android ###
 # Built application files
@@ -326,5 +326,13 @@ Thumbs.db
 
 !/gradle/wrapper/gradle-wrapper.jar
 
-# End of https://www.toptal.com/developers/gitignore/api/android,androidstudio,java,intellij
+### vscode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# End of https://www.toptal.com/developers/gitignore/api/android,androidstudio,java,intellij,vscode
 
