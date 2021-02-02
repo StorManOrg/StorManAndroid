@@ -1,5 +1,6 @@
 package io.github.storagereloaded.android;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,7 +11,7 @@ import androidx.core.widget.NestedScrollView;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 
-public class ItemViewActivity extends AppCompatActivity implements NestedScrollView.OnScrollChangeListener {
+public class ItemViewActivity extends AppCompatActivity implements NestedScrollView.OnScrollChangeListener, View.OnClickListener {
 
     ExtendedFloatingActionButton fab;
 
@@ -23,6 +24,8 @@ public class ItemViewActivity extends AppCompatActivity implements NestedScrollV
 
         MaterialToolbar toolbar = findViewById(R.id.toolbar);
         NestedScrollView scrollView = findViewById(R.id.scroll_view);
+
+        fab.setOnClickListener(this);
 
         setSupportActionBar(toolbar);
         toolbar.setNavigationOnClickListener(this::onNavigationClick);
@@ -41,5 +44,11 @@ public class ItemViewActivity extends AppCompatActivity implements NestedScrollV
             fab.extend();
         else
             fab.shrink();
+    }
+
+    @Override
+    public void onClick(View view) {
+        if(view.getId() == fab.getId())
+            startActivity(new Intent(this, ItemEditActivity.class));
     }
 }
